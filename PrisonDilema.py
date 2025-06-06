@@ -1,5 +1,5 @@
 import config as cfg
-from Prisoner import RandomPrisoner
+from BasicPrisoners import *
 
 class PrisonDilema:
     def __init__(self, player1, player2, num_rounds=10):
@@ -44,7 +44,7 @@ class PrisonDilema:
 
 def main():
     player1 = RandomPrisoner()
-    player2 = RandomPrisoner()
+    player2 = TitForTatPrisoner()
     game = PrisonDilema(player1, player2, num_rounds=10)
     
     winner, scores = game.play_match()
